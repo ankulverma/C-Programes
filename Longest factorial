@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{    double n,j=0,i,sum=1;
+    printf("Enter the number till which you wanna find the factorial ??\n");
+    scanf("%lf",&n);
+
+    for(i=n;i>=1;i--)
+    {
+
+    printf(" %.0lf *",i);
+   sum=sum*i;
+
+    }
+    printf("\b = %.0lf",sum);
+
+
+    return 0;
+}
