@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   long int c,no,sum=0,a,r,b;
+
+    printf("Enter the number  ??\n");
+    scanf("%ld",&no);
+    c=no;
+    while(no>0)
+    {
+       a=no%10;
+        b=a*a*a;
+       
+       no=no/10;
+       sum=sum+b;
+      
+    }
+    printf("%d is armstrong if it is equal to %d "c,sum);
+
+    return 0;
+}
