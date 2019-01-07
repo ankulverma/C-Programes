@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+   { int  ch, max,j ,i,f=0;
+    printf("Enter the number you wanna enter");
+   scanf("%d",&max);
+   int a[max];
+   for(i=0;i<max;i++)
+   {
+     scanf("%d",&a[i]);
+   }
+   printf("\n Before sorting");
+   for(i=0;i<max;i++)
+   {
+     printf("\n  %d  ",a[i]);
+   }
+   for(j=0;j<max;j++)
+   for(i=0;i<max;i++)
+   {
+     if(a[i]>a[i+1])
+     {
+         f=a[i];
+         a[i]=a[i+1];
+         a[i+1]=f;
+
+        // Without using the 3rd variable
+        //a[i]=a[i]+a[i+1];
+        //a[i+1]=a[i]-a[i+1];
+        //a[i+1]=a[i]-a[i+1];
+
+     }
+   }
