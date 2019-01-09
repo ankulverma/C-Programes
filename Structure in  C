@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+    
+int main()
+{   struct student
+{
+    int roll;
+    char name[15];
+    float per;
+
+};
+struct student s;
+
+   printf("Enter the roll no!\n");
+   scanf("%d",&s.roll) ;
+   puts("Enter the name");
+   fflush(stdin);
+   gets(s.name);
+   printf("\n Enter the percentage");
+   scanf("%f",&s.per) ;
+printf("\n Roll no %d",s.roll);
+printf("\n name %s",s.name);
+
+      return 0;
+}
