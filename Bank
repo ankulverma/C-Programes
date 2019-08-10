@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+struct bank {
+                int acno;
+                float bal;
+                char name[30];
+
+             };
+int main()
+{   int ch,m1,m2;
+    char ch1='y';
+    struct bank a1;
+    printf("Enter the Account number\n");
+    scanf("%d",&a1.acno);
+    printf("\nEnter the name\n");
+    fflush(stdin);
+    gets(a1.name);
+    printf("\nEnter the Balance\n");
+    scanf("%f",&a1.bal);
+    while(ch1=='Y' || ch1 == 'y'){
+            printf("\nPress 1 for Withdrawal\n");
+            printf("\nPress 2 for deposit\n");
+            printf("\nPress 3 for Balance\n");
+            printf("\nPress 4 for exit\n");
+            scanf("%d",&ch);
+
+            printf("\nAccount Number %d",a1.acno);
+            printf("\nName           %s",a1.name);
+            switch(ch){
+                    case 1:
+
+                         printf("\nBalance before withdarawl == %0.2f ",a1.bal);
+                         printf("\nEnter the money to withdraw\n");
+                         scanf("%d",&m1);
+                         a1.bal=a1.bal-m1;
+                         if(a1.bal<=4000)
+                         printf("Error:");
+                         printf("\nBalance after withdrawal == %0.2f",a1.bal);
+                         getch();
+                    break;
+
+                  case 2:
+
+
+                         printf("\nBalance bfore deposit == %0.2f",a1.bal);
+                         printf("\nEnter the money to deposit\n");
+                         scanf("%d",&m2);
+                         a1.bal=a1.bal+m2;
+                         printf("\nBalance after Deposit == %0.2f",a1.bal);
+                         getch();
+
+                    break;
+
+                  case 3:
+                       printf("\nBalance == %0.2f",a1.bal);
+                       getch();
+                    break;
+
+                  case 4:
+                  ch1='n';
+                      }
+    }
+
+    return 0;
+}
